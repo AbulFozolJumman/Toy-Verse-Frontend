@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 
 
 const NavBar = () => {
+    const user = null;
     return (
         <div>
-            <div className="navbar bg-base-100 p-5 font-bold max-w-7xl mx-auto">
+            <div className="navbar bg-transparent p-5 font-bold max-w-7xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -12,9 +13,13 @@ const NavBar = () => {
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li><Link to='/'>Home</Link></li>
-                            <li><Link to='/'>All Toys</Link></li>
-                            <li><Link to='/'>My Toys</Link></li>
-                            <li><Link to='/'>Add A Toy</Link></li>
+                            <li><Link to='/allToys'>All Toys</Link></li>
+                            {
+                                user && <>
+                                    <li><Link to='/myToys'>My Toys</Link></li>
+                                    <li><Link to='/addToy'>Add A Toy</Link></li>
+                                </>
+                            }
                             <li><Link to='/blogs'>Blogs</Link></li>
                         </ul>
                     </div>
@@ -26,15 +31,22 @@ const NavBar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/'>All Toys</Link></li>
-                        <li><Link to='/'>My Toys</Link></li>
-                        <li><Link to='/'>Add A Toy</Link></li>
+                        <li><Link to='/allToys'>All Toys</Link></li>
+                        {
+                            user && <>
+                                <li><Link to='/myToys'>My Toys</Link></li>
+                                <li><Link to='/addToy'>Add A Toy</Link></li>
+                            </>
+                        }
                         <li><Link to='/blogs'>Blogs</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
                     <div>
-                        <img className="h-12 rounded-full" src="https://i.ibb.co/WygR9cw/Toy-Verse-Logo.png" alt="" />
+                        {
+                            user ? <img className="h-12 rounded-full" src="https://i.ibb.co/WygR9cw/Toy-Verse-Logo.png" alt="" />
+                                : <li className="list-none btn"><Link to='/login'>Login</Link></li>
+                        }
                     </div>
                 </div>
             </div>

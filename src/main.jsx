@@ -8,6 +8,11 @@ import {
 import Home from './Home/Home.jsx';
 import Main from './Main/Main.jsx';
 import Blogs from './Blogs/Blogs';
+import AllToys from './Toys/AllToys/AllToys';
+import MyToys from './Toys/MyToys/MyToys';
+import AddToy from './Toys/AddToy/AddToy';
+import Login from './Login&Register/Login';
+import Register from './Login&Register/Register';
 
 // Routers
 const router = createBrowserRouter([
@@ -22,6 +27,26 @@ const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs></Blogs>
+      },
+      {
+        path: "/allToys",
+        element: <AllToys></AllToys>
+      },
+      {
+        path: "/myToys",
+        element: <MyToys></MyToys>
+      },
+      {
+        path: "/addToy",
+        element: <AddToy></AddToy>
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
       },
     ],
   },

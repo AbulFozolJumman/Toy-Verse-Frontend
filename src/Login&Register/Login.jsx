@@ -31,7 +31,7 @@ const Login = () => {
                         <button className="text-3xl p-4 bg-[#F5F5F8] rounded-full border-0"><FaGoogle></FaGoogle></button>
                         
                     </div>
-                    <p>Already have an account? <Link to='/signUp' className="text-[#FF3811] text-lg font-semibold">Sign Up</Link></p>
+                    <p>Already have an account? <Link to='/register' className="text-[#FF3811] text-lg font-semibold">Sign Up</Link></p>
                 </div>
             </div>
         </div>

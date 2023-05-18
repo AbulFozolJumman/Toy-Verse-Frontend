@@ -1,13 +1,37 @@
 import { Link } from "react-router-dom";
-import { FaGoogle} from 'react-icons/fa';
-
+import { FaGoogle } from 'react-icons/fa';
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Register = () => {
+    const { userSignUp, updateUserProfile } = useContext(AuthContext)
+
+    const handleUserSignUp = event => {
+        event.preventDefault()
+        const form = event.target;
+        const name = form.name.value;
+        const photo = form.photo.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        // console.log(name, email, password);
+
+        userSignUp(email, password)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                updateUserProfile(name, photo).then().catch()
+                form.reset()
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+    }
+
     return (
         <div>
 
             <div className="lg:w-1/2 mx-auto border border-[#D0D0D0] rounded-xl p-20">
-                <form>
+                <form onSubmit={handleUserSignUp}>
                     <h1 className="text-4xl font-bold mb-12">Sign Up</h1>
                     <div className="form-control mb-8">
                         <label className="label">

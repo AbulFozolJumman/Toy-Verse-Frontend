@@ -1,8 +1,21 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
+import { FaSignOutAlt } from "react-icons/fa";
 
 
 const NavBar = () => {
-    const user = null;
+    const { user, userSignOut } = useContext(AuthContext);
+    console.log("nav", user);
+
+    const handleSignOut = () => {
+        userSignOut()
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser)
+            })
+            .catch(error => console.log(error.message))
+    }
     return (
         <div>
             <div className="navbar bg-transparent p-5 font-bold max-w-7xl mx-auto">
@@ -25,7 +38,7 @@ const NavBar = () => {
                     </div>
                     <div className="flex items-center">
                         <img className="w-28" src="https://i.ibb.co/WygR9cw/Toy-Verse-Logo.png" alt="" />
-                        <h2 className="font-bold text-4xl ml-3">Toy Verse</h2>
+                        <h2 className="font-bold text-4xl ml-3 hidden lg:block">Toy Verse</h2>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -44,7 +57,11 @@ const NavBar = () => {
                 <div className="navbar-end">
                     <div>
                         {
-                            user ? <img className="h-12 rounded-full" src="https://i.ibb.co/WygR9cw/Toy-Verse-Logo.png" alt="" />
+                            user ?
+                                <div className="flex items-center justify-center">
+                                    <img title={user?.displayName} className="h-12 rounded-full" src={user?.photoURL} alt="" />
+                                    <button onClick={handleSignOut} className="btn btn-ghost px-3"><span className="text-4xl"><FaSignOutAlt></FaSignOutAlt></span></button>
+                                </div>
                                 : <li className="list-none btn"><Link to='/login'>Login</Link></li>
                         }
                     </div>

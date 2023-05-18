@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Register = () => {
-    const { userSignUp, updateUserProfile } = useContext(AuthContext)
+    const { userSignUp, updateUserProfile, googleSignIn, setReload } = useContext(AuthContext)
 
     const handleUserSignUp = event => {
         event.preventDefault()
@@ -19,8 +19,21 @@ const Register = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
-                updateUserProfile(name, photo).then().catch()
+                updateUserProfile(name, photo).then(()=>
+                    setReload(true)
+                ).catch()
                 form.reset()
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+    }
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                const googleUser = result.user;
+                console.log(googleUser);
             })
             .catch(error => {
                 console.log(error.message);
@@ -64,9 +77,7 @@ const Register = () => {
                 <div className="text-center">
                     <p className="mt-7">Or Sign Up with</p>
                     <div className="flex items-center justify-center gap-4 my-7">
-                        
-                        <button className="text-3xl p-4 bg-[#F5F5F8] rounded-full border-0"><FaGoogle></FaGoogle></button>
-                        
+                        <button onClick={handleGoogleSignIn} className="text-3xl p-4 bg-[#F5F5F8] rounded-full border-0"><FaGoogle></FaGoogle></button>
                     </div>
                     <p>Already have an account? <Link to='/login' className="text-[#FF3811] text-lg font-semibold">Login</Link></p>
                 </div>

@@ -10,36 +10,18 @@ const googleProvider = new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [reload, setReload] = useState(false);
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
             // console.log("currentUser", currentUser);
             setLoading(false)
-
-            if (currentUser && currentUser.email) {
-                const userEmail = { email: currentUser.email };
-                fetch('https://car-doctor-server-silk-xi.vercel.app/jwt', {
-                    method: 'POST',
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify(userEmail)
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log('jwt', data);
-                        localStorage.setItem('car-access-token', data.token)
-                    })
-            }
-            else{
-                localStorage.removeItem('car-access-token')
-            }
         })
         return () => {
             return unsubscribe();
         }
-    }, [])
+    }, [reload])
 
     const userSignUp = (email, password) => {
         setLoading(true)
@@ -71,6 +53,7 @@ const AuthProvider = ({ children }) => {
     const authInfo = {
         user,
         loading,
+        setReload,
         userSignUp,
         userSignIn,
         googleSignIn,

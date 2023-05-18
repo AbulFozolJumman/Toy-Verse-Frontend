@@ -65,9 +65,7 @@ const Login = () => {
                 <div className="text-center">
                     <p className="mt-7">Or Sign In with</p>
                     <div className="flex items-center justify-center gap-4 my-7">
-                        
                         <button onClick={handleGoogleSignIn} className="text-3xl p-4 bg-[#F5F5F8] rounded-full border-0"><FaGoogle></FaGoogle></button>
-                        
                     </div>
                     <p>Already have an account? <Link to='/register' className="text-[#FF3811] text-lg font-semibold">Sign Up</Link></p>
                 </div>

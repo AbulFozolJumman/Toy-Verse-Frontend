@@ -1,16 +1,18 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from 'react-icons/fa';
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Login = () => {
-    const {userSignIn, googleSignIn} = useContext(AuthContext);
+    const [error, setError] = useState("");
+    const {userSignIn, googleSignIn } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate()
     const from = location.state?.from?.pathname || "/";
     
     const handleUserSignIn = event => {
         event.preventDefault()
+        setError("")
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
@@ -25,11 +27,12 @@ const Login = () => {
 
         })
         .catch(error => {
-            console.log(error.message);
+            setError(error.message);
         })
     }
 
     const handleGoogleSignIn = () => {
+        setError("")
         googleSignIn()
         .then(result => {
             const googleUser = result.user;
@@ -37,7 +40,7 @@ const Login = () => {
             navigate(from, { replace: true });
         })
         .catch(error => {
-            console.log(error.message);
+            setError(error.message);
         })
     }
 
@@ -50,17 +53,18 @@ const Login = () => {
                         <label className="label">
                             <span className="label-text text-lg font-semibold mb-1">Email</span>
                         </label>
-                        <input type="text" name="email" placeholder="Your Email" className="input input-bordered" />
+                        <input type="text" name="email" placeholder="Your Email" className="input input-bordered" required/>
                     </div>
                     <div className="form-control mb-8">
                         <label className="label">
                             <span className="label-text text-lg font-semibold mb-1">Password</span>
                         </label>
-                        <input type="password" name="password" placeholder="Your Password" className="input input-bordered" />
+                        <input type="password" name="password" placeholder="Your Password" className="input input-bordered"  required/>
                     </div>
                     <div className="form-control mt-6">
                         <button className="btn bg-[#FF3811] border-white">Sign In</button>
                     </div>
+                    <p className="text-red-500 mt-5">{error}</p>
                 </form>
                 <div className="text-center">
                     <p className="mt-7">Or Sign In with</p>

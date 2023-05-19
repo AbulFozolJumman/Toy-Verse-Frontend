@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import { FaGoogle } from 'react-icons/fa';
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Register = () => {
+    const [error, setError] = useState("");
     const { userSignUp, updateUserProfile, googleSignIn, setReload } = useContext(AuthContext)
 
     const handleUserSignUp = event => {
         event.preventDefault()
+        setError("")
         const form = event.target;
         const name = form.name.value;
         const photo = form.photo.value;
@@ -21,22 +23,25 @@ const Register = () => {
                 console.log(loggedUser);
                 updateUserProfile(name, photo).then(()=>
                     setReload(true)
-                ).catch()
+                ).catch(error => {
+                    setError(error.message);
+                })
                 form.reset()
             })
             .catch(error => {
-                console.log(error.message);
+                setError(error.message);
             })
     }
 
     const handleGoogleSignIn = () => {
+        setError("")
         googleSignIn()
             .then(result => {
                 const googleUser = result.user;
                 console.log(googleUser);
             })
             .catch(error => {
-                console.log(error.message);
+                setError(error.message);
             })
     }
 
@@ -50,29 +55,30 @@ const Register = () => {
                         <label className="label">
                             <span className="label-text text-lg font-semibold mb-1">Name</span>
                         </label>
-                        <input type="text" name="name" placeholder="Name" className="input input-bordered" />
+                        <input type="text" name="name" placeholder="Name" className="input input-bordered"  required/>
                     </div>
                     <div className="form-control mb-8">
                         <label className="label">
                             <span className="label-text text-lg font-semibold mb-1">Photo URL</span>
                         </label>
-                        <input type="text" name="photo" placeholder="Photo-URL" className="input input-bordered" />
+                        <input type="text" name="photo" placeholder="Photo-URL" className="input input-bordered"  required/>
                     </div>
                     <div className="form-control mb-8">
                         <label className="label">
                             <span className="label-text text-lg font-semibold mb-1">Email</span>
                         </label>
-                        <input type="text" name="email" placeholder="Email" className="input input-bordered" />
+                        <input type="text" name="email" placeholder="Email" className="input input-bordered"  required/>
                     </div>
                     <div className="form-control mb-8">
                         <label className="label">
                             <span className="label-text text-lg font-semibold mb-1">Password</span>
                         </label>
-                        <input type="password" name="password" placeholder="Password" className="input input-bordered" />
+                        <input type="password" name="password" placeholder="Password" className="input input-bordered"  required />
                     </div>
                     <div className="form-control mt-6">
                         <button className="btn bg-[#FF3811] border-white">Sign Up</button>
                     </div>
+                    <p className="text-red-500 mt-5">{error}</p>
                 </form>
                 <div className="text-center">
                     <p className="mt-7">Or Sign Up with</p>

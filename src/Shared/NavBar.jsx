@@ -59,7 +59,9 @@ const NavBar = () => {
                         {
                             user ?
                                 <div className="flex items-center justify-center">
-                                    <img title={user?.displayName} className="h-12 rounded-full" src={user?.photoURL} alt="" />
+                                    <div className="tooltip tooltip-left tooltip-info" data-tip={user?.displayName}>
+                                        <img className="h-12 rounded-full" src={user?.photoURL} alt="" />
+                                    </div>
                                     <button onClick={handleSignOut} className="btn btn-ghost px-3"><span className="text-4xl"><FaSignOutAlt></FaSignOutAlt></span></button>
                                 </div>
                                 : <li className="list-none btn"><Link to='/login'>Login</Link></li>

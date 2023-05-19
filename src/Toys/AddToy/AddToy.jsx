@@ -12,7 +12,7 @@ const AddToy = () => {
         const email = user?.email;
         const toyName = form.toyName.value;
         const picture = form.photo.value;
-        const categoryName = form.categoryName.value;
+        const category = form.categoryName.value;
         const price = form.price.value;
         const rating = form.rating.value;
         const quantity = form.quantity.value;
@@ -22,7 +22,7 @@ const AddToy = () => {
             email, 
             toyName,
             picture, 
-            categoryName,
+            category,
             price, 
             rating,
             quantity,
@@ -31,7 +31,7 @@ const AddToy = () => {
 
         console.log(addToy);
 
-        fetch('http://localhost:5000/toys', {
+        fetch('https://toy-verse-server.vercel.app/toys', {
             method: 'POST', 
             headers: {
                 'content-type': 'application/json'
@@ -58,13 +58,13 @@ const AddToy = () => {
                         <label className="label">
                             <span className="label-text text-lg font-semibold mb-1">Your Name</span>
                         </label>
-                        <input type="text" name="name" defaultValue={user?.displayName} placeholder="Your Name" className="input input-bordered" required />
+                        <input type="text" readOnly name="name" defaultValue={user?.displayName} placeholder="Your Name" className="input input-bordered" required />
                     </div>
                     <div className="form-control mb-4">
                         <label className="label">
                             <span className="label-text text-lg font-semibold mb-1">Your Email</span>
                         </label>
-                        <input type="text" name="email" defaultValue={user?.email} placeholder="Your Email" className="input input-bordered" required />
+                        <input type="text" readOnly name="email" defaultValue={user?.email} placeholder="Your Email" className="input input-bordered" required />
                     </div>
                     <div className="form-control mb-4">
                         <label className="label">

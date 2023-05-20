@@ -1,13 +1,20 @@
 import useTitle from "../Hooks/useTitle";
+import Banner from "./Banner/Banner";
+import Reviews from "./Reviews/Reviews";
 import ToyCategories from "./ToyCategories/ToyCategories";
+import ToyDonation from "./ToyDonation/ToyDonation";
+import ToyGallery from "./ToyGallery/ToyGallery";
 
 
 const Home = () => {
     useTitle("Home")
     return (
         <div className="max-w-7xl mx-auto">
-            <h2>Home</h2>
+            <Banner></Banner>
+            <ToyGallery></ToyGallery>
             <ToyCategories></ToyCategories>
+            <Reviews></Reviews>
+            <ToyDonation></ToyDonation>
         </div>
     );
 };

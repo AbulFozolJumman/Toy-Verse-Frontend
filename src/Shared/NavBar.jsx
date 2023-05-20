@@ -17,7 +17,7 @@ const NavBar = () => {
             .catch(error => console.log(error.message))
     }
     return (
-        <div>
+        <div className="my-5">
             <div className="navbar bg-transparent p-5 font-bold max-w-7xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">

@@ -6,7 +6,7 @@ const MyToys = () => {
     const [myToys, setMyToys] = useState([]);
     const [sortOrder, setSortOrder] = useState('asc');
 
-    const url = `http://localhost:5000/toys?email=${user?.email}`;
+    const url = `https://toy-verse-server.vercel.app/toys?email=${user?.email}`;
     useEffect(() => {
         fetch(url, {
             method: 'GET',

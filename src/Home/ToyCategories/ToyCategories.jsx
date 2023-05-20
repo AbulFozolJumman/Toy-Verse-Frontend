@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "daisyui/dist/full.css";
+import PrivateRoute from "../../PrivateRoute/PrivateRoute";
 
 const ToyCategories = () => {
     const [toys, setToys] = useState([]);
@@ -84,6 +85,7 @@ const ToyCategories = () => {
 
             {/* Modal to display selected toy details */}
             {selectedToy && (
+                <PrivateRoute>
                 <div className="fixed z-10 inset-0 overflow-y-auto">
                     <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
                         {/* Overlay */}
@@ -139,6 +141,7 @@ const ToyCategories = () => {
                         </div>
                     </div>
                 </div> 
+                </PrivateRoute>
             )}
 
         </div>

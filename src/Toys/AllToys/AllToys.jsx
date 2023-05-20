@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Modal from '../../Shared/Modal';
+import PrivateRoute from '../../PrivateRoute/PrivateRoute';
 
 const AllToys = () => {
   const allToys = useLoaderData();
@@ -77,6 +78,7 @@ const AllToys = () => {
 
       {/* Modal */}
       {selectedToy && (
+        <PrivateRoute>
         <Modal onClose={closeModal}>
           <div className="flex flex-col items-center">
             <img src={selectedToy.picture} alt={selectedToy.toyName} className="w-64 h-64 object-contain" />
@@ -89,6 +91,7 @@ const AllToys = () => {
             <p className="text-gray-600">Description: {selectedToy.description}</p>
           </div>
         </Modal>
+        </PrivateRoute>
       )}
     </div>
   );

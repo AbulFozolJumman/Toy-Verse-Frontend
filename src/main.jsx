@@ -16,6 +16,7 @@ import Register from './Login&Register/Register';
 import AuthProvider from './Provider/AuthProvider';
 import ErrorPage from './Error/Error';
 import ShowError from './Error/ShowError';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 // Routers
 const router = createBrowserRouter([
@@ -39,11 +40,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/myToys",
-        element: <MyToys></MyToys>
+        element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
       },
       {
         path: "/addToy",
-        element: <AddToy></AddToy>
+        element: <PrivateRoute><AddToy></AddToy></PrivateRoute>
       },
       {
         path: "/error",

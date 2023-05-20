@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import useTitle from "../../Hooks/useTitle";
 
 
 const AddToy = () => {
+    useTitle("Add a Toy")
     const {user} = useContext(AuthContext);
 
     const handleBookService = event =>{

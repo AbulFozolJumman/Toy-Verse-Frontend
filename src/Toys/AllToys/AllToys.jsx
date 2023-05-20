@@ -2,8 +2,10 @@ import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Modal from '../../Shared/Modal';
 import PrivateRoute from '../../PrivateRoute/PrivateRoute';
+import useTitle from '../../Hooks/useTitle';
 
 const AllToys = () => {
+  useTitle("All Toys")
   const allToys = useLoaderData();
   const [searchTerm, setSearchTerm] = useState('');
   const [visibleToys, setVisibleToys] = useState(allToys.slice(0, 20));

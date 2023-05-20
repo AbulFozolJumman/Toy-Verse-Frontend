@@ -14,12 +14,15 @@ import AddToy from './Toys/AddToy/AddToy';
 import Login from './Login&Register/Login';
 import Register from './Login&Register/Register';
 import AuthProvider from './Provider/AuthProvider';
+import ErrorPage from './Error/Error';
+import ShowError from './Error/ShowError';
 
 // Routers
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -41,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/addToy",
         element: <AddToy></AddToy>
+      },
+      {
+        path: "/error",
+        element: <ShowError></ShowError>
       },
       {
         path: "/login",

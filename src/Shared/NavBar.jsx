@@ -52,6 +52,7 @@ const NavBar = () => {
                             </>
                         }
                         <li><Link to='/blogs'>Blogs</Link></li>
+                        <li><Link to='/error'>Error</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">

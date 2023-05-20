@@ -15,7 +15,7 @@ const ToyCategories = () => {
             .then(res => res.json())
             .then(data => setToys(data))
             .catch(error => console.error('Error retrieving data:', error));
-    }, []);
+    }, [url]);
 
     // Function to fetch toy details by _id
     const fetchToyDetails = (id) => {
@@ -33,7 +33,7 @@ const ToyCategories = () => {
 
     return (
         <div className="container px-4 py-8 max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold mb-4 text-center">All Toys</h2>
+            <h2 className="text-4xl font-bold mb-4 text-center">Browse by Category</h2>
             <div className="flex justify-center">
                 <div className="tabs">
                     <a

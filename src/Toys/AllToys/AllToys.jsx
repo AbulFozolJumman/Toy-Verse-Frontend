@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Modal from '../../Shared/Modal';
 
 const AllToys = () => {
   const allToys = useLoaderData();
   const [searchTerm, setSearchTerm] = useState('');
   const [visibleToys, setVisibleToys] = useState(allToys.slice(0, 20));
+  const [selectedToy, setSelectedToy] = useState(null);
 
   // Filter and limit the toys based on the search term
   const filteredToys = visibleToys.filter(toy =>
@@ -15,6 +17,16 @@ const AllToys = () => {
   useState(() => {
     setVisibleToys(allToys.slice(0, 20));
   }, [allToys]);
+
+  // Function to handle showing the modal and setting the selected toy
+  const showDetails = (toy) => {
+    setSelectedToy(toy);
+  };
+
+  // Function to handle closing the modal
+  const closeModal = () => {
+    setSelectedToy(null);
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -50,7 +62,10 @@ const AllToys = () => {
                 <td className="px-6 py-4 whitespace-nowrap">${toy.price}</td>
                 <td className="px-6 py-4 whitespace-nowrap">{toy.quantity}</td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  <button
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    onClick={() => showDetails(toy)}
+                  >
                     Show Details
                   </button>
                 </td>
@@ -59,6 +74,22 @@ const AllToys = () => {
           </tbody>
         </table>
       </div>
+
+      {/* Modal */}
+      {selectedToy && (
+        <Modal onClose={closeModal}>
+          <div className="flex flex-col items-center">
+            <img src={selectedToy.picture} alt={selectedToy.toyName} className="w-64 h-64 object-contain" />
+            <h3 className="text-xl font-bold mt-4">Toy Name: {selectedToy.toyName}</h3>
+            <p className="text-gray-600">Seller Name: {selectedToy.displayName}</p>
+            <p className="text-gray-600">Seller Email: {selectedToy.email}</p>
+            <p className="text-gray-600">Price: ${selectedToy.price}</p>
+            <p className="text-gray-600">Rating: {selectedToy.rating}</p>
+            <p className="text-gray-600">Quantity: {selectedToy.quantity}</p>
+            <p className="text-gray-600">Description: {selectedToy.description}</p>
+          </div>
+        </Modal>
+      )}
     </div>
   );
 };

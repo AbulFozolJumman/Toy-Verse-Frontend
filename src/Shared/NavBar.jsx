@@ -3,11 +3,12 @@ import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { FaSignOutAlt } from "react-icons/fa";
 
-
+// This is Footer section
 const NavBar = () => {
     const { user, userSignOut } = useContext(AuthContext);
     console.log("nav", user);
 
+    // This is User logout handler
     const handleSignOut = () => {
         userSignOut()
             .then(result => {
@@ -17,7 +18,7 @@ const NavBar = () => {
             .catch(error => console.log(error.message))
     }
     return (
-        <div className="my-5">
+        <div className="mb-5 py-5 shadow-lg bg-gray-100">
             <div className="navbar bg-transparent p-5 font-bold max-w-7xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -64,9 +65,9 @@ const NavBar = () => {
                                     <div className="tooltip tooltip-left tooltip-info" data-tip={user?.displayName}>
                                         <img className="h-12 rounded-full" src={user?.photoURL} alt="" />
                                     </div>
-                                    <button onClick={handleSignOut} className="btn btn-ghost px-3"><span className="text-4xl"><FaSignOutAlt></FaSignOutAlt></span></button>
+                                    <button onClick={handleSignOut} className="btn btn-ghost px-3"><span className="text-4xl text-pink-500"><FaSignOutAlt></FaSignOutAlt></span></button>
                                 </div>
-                                : <li className="list-none btn"><Link to='/login'>Login</Link></li>
+                                : <li className="list-none btn btn-secondary"><Link to='/login'>Login</Link></li>
                         }
                     </div>
                 </div>

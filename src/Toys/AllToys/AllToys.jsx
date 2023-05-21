@@ -4,6 +4,7 @@ import Modal from '../../Shared/Modal';
 import PrivateRoute from '../../PrivateRoute/PrivateRoute';
 import useTitle from '../../Hooks/useTitle';
 
+// This is All Toys Page
 const AllToys = () => {
   useTitle("All Toys")
   const allToys = useLoaderData();
@@ -46,7 +47,7 @@ const AllToys = () => {
       </div>
       <div className="overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-gray-100">
+          <thead className="bg-green-300">
             <tr>
               <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">Seller Name</th>
               <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">Toy Name</th>
@@ -56,7 +57,7 @@ const AllToys = () => {
               <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">Actions</th>
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
+          <tbody className="bg-green-100 divide-y divide-gray-200">
             {filteredToys.map((toy, index) => (
               <tr key={index}>
                 <td className="px-6 py-4 whitespace-nowrap">{toy.displayName}</td>
@@ -66,7 +67,7 @@ const AllToys = () => {
                 <td className="px-6 py-4 whitespace-nowrap">{toy.quantity}</td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    className="btn btn-secondary"
                     onClick={() => showDetails(toy)}
                   >
                     Show Details

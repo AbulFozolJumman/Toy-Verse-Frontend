@@ -2,11 +2,12 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import useTitle from "../../Hooks/useTitle";
 
-
+// This is Add Toy Page
 const AddToy = () => {
     useTitle("Add a Toy")
     const {user} = useContext(AuthContext);
 
+    // This is Add Toy handler
     const handleBookService = event =>{
         event.preventDefault();
         const form = event.target;
@@ -44,16 +45,15 @@ const AddToy = () => {
         .then(data => {
             console.log(data);
             if(data.insertedId){
-                alert('service book successfully')
+                alert('Toy added successfully')
             }
         })
 
     }
 
-
     return (
-        <div>
-            <div className="lg:w-1/2 mx-auto border border-[#D0D0D0] rounded-xl p-20">
+        <div className="my-12">
+            <div className="lg:w-1/2 mx-auto border border-[#D0D0D0] rounded-xl p-20 shadow-lg bg-gray-100">
                 <form onSubmit={handleBookService}>
                     <h1 className="text-4xl font-bold mb-6">Add a Toy</h1>
                     <div className="form-control mb-4">
@@ -113,7 +113,7 @@ const AddToy = () => {
                         <textarea required name="description" placeholder="Description" className="textarea textarea-bordered textarea-lg w-full" ></textarea>
                     </div>
                     <div className="form-control mt-3">
-                        <button className="btn bg-[#FF3811] border-white">Add Now</button>
+                        <button className="btn btn-secondary">Add Now</button>
                     </div>
                 </form>
             </div>

@@ -4,6 +4,8 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import useTitle from "../Hooks/useTitle";
 
+// This is Login Page
+// User Sign in and update profile handler
 const Login = () => {
     useTitle("Login")
     const [error, setError] = useState("");
@@ -33,6 +35,7 @@ const Login = () => {
         })
     }
 
+    // Google Sign in handler
     const handleGoogleSignIn = () => {
         setError("")
         googleSignIn()

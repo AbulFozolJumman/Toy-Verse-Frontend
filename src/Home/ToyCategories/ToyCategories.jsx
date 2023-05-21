@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "daisyui/dist/full.css";
 import PrivateRoute from "../../PrivateRoute/PrivateRoute";
 
+// This is Category Section
 const ToyCategories = () => {
     const [toys, setToys] = useState([]);
     const [activeTab, setActiveTab] = useState("Marvel");
@@ -33,7 +34,7 @@ const ToyCategories = () => {
     };
 
     return (
-        <div className="container px-4 py-8 max-w-7xl mx-auto">
+        <div className="container px-4 py-8 max-w-7xl mx-auto bg-gray-100">
             <h2 className="text-4xl font-bold mb-4 text-center">Browse by Category</h2>
             <div className="flex justify-center">
                 <div className="tabs">
@@ -74,7 +75,7 @@ const ToyCategories = () => {
                             <span className="text-gray-500 mr-1">Rating: {toy.rating}</span>
                         </div>
                         <div className="flex justify-center mt-4">
-                            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                            <button className="btn btn-secondary"
                                 onClick={() => fetchToyDetails(toy._id)}>
                                 Show Details
                             </button>
@@ -132,7 +133,7 @@ const ToyCategories = () => {
                             <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                                 <button
                                     type="button"
-                                    className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 btn bg-blue-500 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
+                                    className="btn btn-secondary"
                                     onClick={resetSelectedToy}
                                 >
                                     Close

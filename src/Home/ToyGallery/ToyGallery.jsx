@@ -1,6 +1,6 @@
 import Marquee from "react-fast-marquee";
 
-
+// This is Toy Photo Gallery Section
 const ToyGallery = () => {
     return (
         <div className="my-24">

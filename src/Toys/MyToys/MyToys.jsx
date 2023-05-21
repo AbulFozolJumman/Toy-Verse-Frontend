@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import useTitle from '../../Hooks/useTitle';
 
+// This is My Toy Page
 const MyToys = () => {
   useTitle("My Toys")
   const { user } = useContext(AuthContext);
@@ -128,7 +129,7 @@ const MyToys = () => {
       <h2 className="text-4xl font-bold mb-4 text-center">My Toys</h2>
       <div className="flex justify-center mb-4">
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="btn btn-secondary"
           onClick={sortToys}
         >
           Sort: {sortOrder === 'asc' ? 'Ascending' : 'Descending'}
@@ -136,7 +137,7 @@ const MyToys = () => {
       </div>
       <div className="overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-gray-100">
+          <thead className="bg-green-300">
             <tr>
               <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">Actions</th>
               <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">Toy Name</th>
@@ -148,7 +149,7 @@ const MyToys = () => {
               <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">Description</th>
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
+          <tbody className="bg-green-100 divide-y divide-gray-200">
             {myToys.map((toy, index) => (
               <tr key={index}>
                 <td className="px-6 py-4 whitespace-nowrap">
@@ -285,14 +286,14 @@ const MyToys = () => {
                         <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
                           <button
                             type="submit"
-                            className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
+                            className="w-full btn btn-secondary inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
                           >
                             Update
                           </button>
                           <button
                             onClick={closeModal}
                             type="button"
-                            className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                            className="btn"
                           >
                             Cancel
                           </button>

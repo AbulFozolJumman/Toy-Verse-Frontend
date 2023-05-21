@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 
-
+// Private Route to protect Routes by user
 const PrivateRoute = ({ children }) => {
     const { user, loading } = useContext(AuthContext);
     const location = useLocation();

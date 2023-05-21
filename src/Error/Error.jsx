@@ -16,7 +16,7 @@ export default function ErrorPage() {
                 Please Refresh the page
             </p>
             <Link to="/">
-                <button className="btn btn-primary">Go to Home</button>
+                <button className="btn btn-secondary">Go to Home</button>
             </Link>
         </div>
     );

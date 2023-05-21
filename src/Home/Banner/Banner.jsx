@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+// This is Banner Section
+// AOS implementing to Banner
 const Banner = () => {
     useEffect(() => {
         AOS.init({ duration: 200, once: true });

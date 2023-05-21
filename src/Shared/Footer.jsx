@@ -1,8 +1,7 @@
-
-
+// This is Footer section
 const Footer = () => {
     return (
-        <div>
+        <div className="bg-gray-100">
             <footer className="footer p-10 bg-transparent">
                 <div>
                     <img className="w-28" src="https://i.ibb.co/WygR9cw/Toy-Verse-Logo.png" alt="" />

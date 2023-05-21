@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
-
+// This is Toy Donation Section
 
 const ToyDonation = () => {
     return (
-        <div className="hero min-h-screen" style={{ backgroundImage: `url("https://www.thespruce.com/thmb/qahLNRLWfxiwZNVkkjOeUsSJbe4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/donate-to-toys-for-tots-3255561_01-cf95b8c8f1b1419585a3c445096988ae.JPG")` }}>
+        <div className="hero min-h-screen mb-12" style={{ backgroundImage: `url("https://www.thespruce.com/thmb/qahLNRLWfxiwZNVkkjOeUsSJbe4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/donate-to-toys-for-tots-3255561_01-cf95b8c8f1b1419585a3c445096988ae.JPG")` }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
@@ -19,7 +19,7 @@ const ToyDonation = () => {
                         To donate, please visit our donation center or contact us for more
                         information.
                     </p>
-                    <button className="btn btn-primary">Get Started</button>
+                    <button className="btn btn-secondary">Get Started</button>
                 </div>
             </div>
         </div>

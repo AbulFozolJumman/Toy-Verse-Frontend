@@ -14,7 +14,7 @@ const AllToys = () => {
 
   // Filter and limit the toys based on the search term
   const filteredToys = visibleToys.filter(toy =>
-    toy.toyName.toLowerCase().includes(searchTerm.toLowerCase())
+    toy.toyName && toy.toyName.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   // Update the visible toys when the allToys array changes

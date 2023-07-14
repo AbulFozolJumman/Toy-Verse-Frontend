@@ -8,7 +8,7 @@ const Reviews = () => {
             <h2 className="text-4xl font-bold text-center mb-5">Customer Reviews</h2>
             <Marquee>
                 <div className="bg-gray-100 rounded-lg p-6 shadow-md mb-4 w-[400px] h-[200px] mx-5">
-                    <img className="w-12 h-12 rounded-full object-cover mr-4" src="https://lh3.googleusercontent.com/a/AGNmyxYK2Uu1lTzoUSYhPrXXi5vPii0TxpKjHaGpdSGF=s96-c" alt="" />
+                    <img className="w-12 h-12 rounded-full object-cover mr-4" src="https://media.licdn.com/dms/image/D4D03AQFLcYs4C7FsOw/profile-displayphoto-shrink_800_800/0/1666716512118?e=2147483647&v=beta&t=4CaQVyczCQ8k14GxUvqZhSfCRw7FFNCdKVFnv92VDVI" alt="" />
                     <p>This toy is amazing! My child absolutely loves playing with it. The quality is excellent, and it provides hours of entertainment.</p>
                 </div>
                 <div className="bg-gray-100 rounded-lg p-6 shadow-md mb-4 w-[400px] h-[200px] mx-5">
@@ -20,7 +20,7 @@ const Reviews = () => {
                     <p>As a parent, I'm always looking for toys that are educational and fun. This toy ticks all the boxes. My child has learned so much while playing with it.</p>
                 </div>
                 <div className="bg-gray-100 rounded-lg p-6 shadow-md mb-4 w-[400px] h-[200px] mx-5">
-                    <img className="w-12 h-12 rounded-full object-cover mr-4" src="https://images.beinsports.com/bT0wwy0bOzWbWsZkBdmX77KpXUQ=/full-fit-in/1000x0/cristianoronaldo-cropped_1p1qsv9ahm97r1ar3m7c4sklup.jpg" alt="" />
+                    <img className="w-12 h-12 rounded-full object-cover mr-4" src="https://i.ibb.co/G2pvD6n/pp.jpg" alt="" />
                     <p>I am impressed with the durability of this toy. It has been through countless playtime adventures and still looks as good as new. Great value for money!</p>
                 </div>
                 <div className="bg-gray-100 rounded-lg p-6 shadow-md mb-4 w-[400px] h-[200px] mx-5">

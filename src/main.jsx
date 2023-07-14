@@ -15,7 +15,6 @@ import Login from './Login&Register/Login';
 import Register from './Login&Register/Register';
 import AuthProvider from './Provider/AuthProvider';
 import ErrorPage from './Error/Error';
-import ShowError from './Error/ShowError';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 // Routers
@@ -45,10 +44,6 @@ const router = createBrowserRouter([
       {
         path: "/addToy",
         element: <PrivateRoute><AddToy></AddToy></PrivateRoute>
-      },
-      {
-        path: "/error",
-        element: <ShowError></ShowError>
       },
       {
         path: "/login",

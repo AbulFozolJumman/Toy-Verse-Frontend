@@ -93,7 +93,7 @@ const MyToys = () => {
       .then(data => {
         console.log(data);
         if (data.modifiedCount > 0) {
-          alert('Updated successfully');
+          alert('Toy Updated successfully');
           // Update the toy in the myToys state
           const updatedToys = myToys.map(toy => {
             if (toy._id === id) {

@@ -4,7 +4,7 @@ const ToyDIYProjects = () => {
   const projects = [
     {
       title: 'Cardboard Castle',
-      image: 'https://www.kixcereal.com/wp-content/uploads/2014/07/recycled-cardboard-castle-craft-2.jpg',
+      image: 'https://i.ibb.co/zXSPXLG/recycled-cardboard-castle-craft-2.jpg',
       description: 'Build a magnificent castle using cardboard boxes and paint.',
     },
     {
@@ -14,7 +14,7 @@ const ToyDIYProjects = () => {
     },
     {
       title: 'Sock Puppets',
-      image: 'https://supersimple.com/wp-content/uploads/2022/04/p1320503-1200w.jpg',
+      image: 'https://i.ibb.co/bPzrBbJ/p1320503-1200w.jpg',
       description: 'Create your own adorable sock puppets and put on a puppet show.',
     },
   ];

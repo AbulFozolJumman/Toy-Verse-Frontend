@@ -2,7 +2,7 @@
 
 const TOTM = () => {
   return (
-    <div className="bg-gradient-to-br from-red-600 to-yellow-400 text-white p-8 rounded-lg mb-12 shadow-lg">
+    <div className="bg-gradient-to-br from-red-600 to-yellow-400 text-white p-8 mb-12 shadow-lg">
       <h2 className="text-3xl font-bold mb-4">Toy of the Month</h2>
       <div className="flex justify-center items-center">
         <img

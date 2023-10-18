@@ -18,7 +18,7 @@ const NavBar = () => {
             .catch(error => console.log(error.message))
     }
     return (
-        <div className="mb-5 py-5 shadow-lg bg-gray-100">
+        <div className="py-3 shadow-lg">
             <div className="navbar bg-transparent p-5 font-bold max-w-7xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -40,7 +40,6 @@ const NavBar = () => {
                     </div>
                     <div className="flex items-center">
                         <img className="w-28" src="https://i.ibb.co/WygR9cw/Toy-Verse-Logo.png" alt="" />
-                        <h2 className="font-bold text-4xl ml-3 hidden lg:block">Toy Verse</h2>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">

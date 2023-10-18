@@ -12,7 +12,7 @@ import ToyGallery from "./ToyGallery/ToyGallery";
 const Home = () => {
     useTitle("Home")
     return (
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1440px] mx-auto">
             <Banner></Banner>
             <ToyGallery></ToyGallery>
             <TOTM></TOTM>

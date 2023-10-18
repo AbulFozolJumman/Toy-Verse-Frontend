@@ -3,10 +3,10 @@
 
 const Tips = () => {
     return (
-        <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-8 rounded-lg shadow my-12">
+        <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-10 md:px-20 shadow">
           <h2 className="text-3xl font-bold mb-6 text-white">Toy Safety Tips</h2>
           <ul className="space-y-4">
-            <li className="flex items-start">
+            <li className="flex items-start animate-bounce">
               <div className="flex-shrink-0 h-6 w-6 bg-white rounded-full flex justify-center items-center mr-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ const Tips = () => {
                 your child's developmental stage.
               </p>
             </li>
-            <li className="flex items-start">
+            <li className="flex items-start animate-bounce">
               <div className="flex-shrink-0 h-6 w-6 bg-white rounded-full flex justify-center items-center mr-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ const Tips = () => {
                 hazards. Replace or repair them if needed.
               </p>
             </li>
-            <li className="flex items-start">
+            <li className="flex items-start animate-bounce">
               <div className="flex-shrink-0 h-6 w-6 bg-white rounded-full flex justify-center items-center mr-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ const Tips = () => {
           prevent choking and ingestion.
               </p>
             </li>
-            <li className="flex items-start">
+            <li className="flex items-start animate-bounce">
               <div className="flex-shrink-0 h-6 w-6 bg-white rounded-full flex justify-center items-center mr-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ const Tips = () => {
           toys.
               </p>
             </li>
-            <li className="flex items-start">
+            <li className="flex items-start animate-bounce">
               <div className="flex-shrink-0 h-6 w-6 bg-white rounded-full flex justify-center items-center mr-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +116,7 @@ const Tips = () => {
           and accidents.
               </p>
             </li>
-            <li className="flex items-start">
+            <li className="flex items-start animate-bounce">
               <div className="flex-shrink-0 h-6 w-6 bg-white rounded-full flex justify-center items-center mr-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +138,7 @@ const Tips = () => {
           playtime.
               </p>
             </li>
-            <li className="flex items-start">
+            <li className="flex items-start animate-bounce">
               <div className="flex-shrink-0 h-6 w-6 bg-white rounded-full flex justify-center items-center mr-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -160,7 +160,7 @@ const Tips = () => {
           prevent strangulation.
               </p>
             </li>
-            <li className="flex items-start">
+            <li className="flex items-start animate-bounce">
               <div className="flex-shrink-0 h-6 w-6 bg-white rounded-full flex justify-center items-center mr-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -181,7 +181,7 @@ const Tips = () => {
               Dispose of broken or old toys properly to avoid potential injuries.
               </p>
             </li>
-            <li className="flex items-start">
+            <li className="flex items-start animate-bounce">
               <div className="flex-shrink-0 h-6 w-6 bg-white rounded-full flex justify-center items-center mr-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

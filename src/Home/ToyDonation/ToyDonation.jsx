@@ -3,7 +3,7 @@
 
 const ToyDonation = () => {
     return (
-        <div className="hero min-h-screen mb-12" style={{ backgroundImage: `url("https://www.thespruce.com/thmb/qahLNRLWfxiwZNVkkjOeUsSJbe4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/donate-to-toys-for-tots-3255561_01-cf95b8c8f1b1419585a3c445096988ae.JPG")` }}>
+        <div className="hero min-h-screen mb-12" style={{ backgroundImage: `url("https://i.ibb.co/YfwY2fr/donate-to-toys-for-tots-3255561-01-cf95b8c8f1b1419585a3c445096988ae.jpg")` }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">

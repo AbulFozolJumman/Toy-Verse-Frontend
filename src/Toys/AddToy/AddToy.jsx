@@ -53,67 +53,67 @@ const AddToy = () => {
 
     return (
         <div className="my-12">
-            <div className="lg:w-1/2 mx-auto border border-[#D0D0D0] rounded-xl p-20 shadow-lg bg-gray-100">
+            <div className="lg:w-1/2 mx-auto border border-[#D0D0D0] rounded-md p-10 shadow-md shadow-pink-500 bg-gray-100">
                 <form onSubmit={handleBookService}>
                     <h1 className="text-4xl font-bold mb-6">Add a Toy</h1>
                     <div className="form-control mb-4">
                         <label className="label">
                             <span className="label-text text-lg font-semibold mb-1">Your Name</span>
                         </label>
-                        <input type="text" readOnly name="name" defaultValue={user?.displayName} placeholder="Your Name" className="input input-bordered" required />
+                        <input type="text" readOnly name="name" defaultValue={user?.displayName} placeholder="Your Name" className="h-10 pl-3 outline-pink-500 rounded-md" required />
                     </div>
                     <div className="form-control mb-4">
                         <label className="label">
                             <span className="label-text text-lg font-semibold mb-1">Your Email</span>
                         </label>
-                        <input type="text" readOnly name="email" defaultValue={user?.email} placeholder="Your Email" className="input input-bordered" required />
+                        <input type="text" readOnly name="email" defaultValue={user?.email} placeholder="Your Email" className="h-10 pl-3 outline-pink-500 rounded-md" required />
                     </div>
                     <div className="form-control mb-4">
                         <label className="label">
                             <span className="label-text text-lg font-semibold mb-1">Toy Name</span>
                         </label>
-                        <input type="text" name="toyName" placeholder="Toy Name" className="input input-bordered" required />
+                        <input type="text" name="toyName" placeholder="Toy Name" className="h-10 pl-3 outline-pink-500 rounded-md" required />
                     </div>
                     <div className="form-control mb-4">
                         <label className="label">
                             <span className="label-text text-lg font-semibold mb-1">Toy Photo URL</span>
                         </label>
-                        <input type="text" name="photo" placeholder="Photo-URL" className="input input-bordered" required />
+                        <input type="text" name="photo" placeholder="Photo-URL" className="h-10 pl-3 outline-pink-500 rounded-md" required />
                     </div>
                     <div className="form-control mb-4">
                         <label className="label">
                             <span className="label-text text-lg font-semibold mb-1">Category Name</span>
                         </label>
-                        <input type="text" name="categoryName" placeholder="Category Name" className="input input-bordered" required />
+                        <input type="text" name="categoryName" placeholder="Category Name" className="h-10 pl-3 outline-pink-500 rounded-md" required />
                     </div>
                     <div className="form-control mb-4">
                         <label className="label">
                             <span className="label-text text-lg font-semibold mb-1">Price</span>
                         </label>
-                        <input type="text" name="price" placeholder="Price" className="input input-bordered" required />
+                        <input type="text" name="price" placeholder="Price" className="h-10 pl-3 outline-pink-500 rounded-md" required />
                     </div>
                     <div className="lg:flex justify-between">
                         <div className="form-control mb-4">
                             <label className="label">
                                 <span className="label-text text-lg font-semibold mb-1">Rating</span>
                             </label>
-                            <input type="text" name="rating" placeholder="Rating" className="input input-bordered" required />
+                            <input type="text" name="rating" placeholder="Rating" className="h-10 pl-3 outline-pink-500 rounded-md" required />
                         </div>
                         <div className="form-control mb-4">
                             <label className="label">
                                 <span className="label-text text-lg font-semibold mb-1">Quantity</span>
                             </label>
-                            <input type="number" name="quantity" placeholder="Quantity" className="input input-bordered" required />
+                            <input type="number" name="quantity" placeholder="Quantity" className="h-10 pl-3 outline-pink-500 rounded-md" required />
                         </div>
                     </div>
                     <div className="form-control mb-4">
                         <label className="label">
                             <span className="label-text text-lg font-semibold mb-1">Description</span>
                         </label>
-                        <textarea required name="description" placeholder="Description" className="textarea textarea-bordered textarea-lg w-full" ></textarea>
+                        <textarea required name="description" placeholder="Description" className="w-full h-20 pl-3 pt-3 outline-pink-500 rounded-md" ></textarea>
                     </div>
-                    <div className="form-control mt-3">
-                        <button className="btn btn-secondary">Add Now</button>
+                    <div className="form-control mt-5">
+                        <button className="bg-pink-500 hover:bg-pink-400 text-pink-900 hover:text-pink-800 font-bold px-4 py-2 rounded-md">Add Now</button>
                     </div>
                 </form>
             </div>

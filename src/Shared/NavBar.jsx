@@ -19,7 +19,7 @@ const NavBar = () => {
     }
     return (
         <div className="py-3 shadow-lg">
-            <div className="navbar bg-transparent p-5 font-bold max-w-7xl mx-auto">
+            <div className="navbar bg-transparent p-5 font-bold max-w-7xl mx-auto container">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost">

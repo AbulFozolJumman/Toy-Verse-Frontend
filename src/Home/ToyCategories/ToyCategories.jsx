@@ -35,7 +35,7 @@ const ToyCategories = () => {
 
     return (
         <div className="container px-4 py-8 max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold mb-4 text-center">Browse by Category</h2>
+            <h2 className="text-4xl font-bold mb-4 p-2 border-s-4 border-pink-600">Browse by Category</h2>
             <div className="flex justify-center">
                 <div className="tabs">
                     <a
@@ -64,7 +64,7 @@ const ToyCategories = () => {
             {/* <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700" /> */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 flex justify-center">
                 {filteredToys.map((toy, index) => (
-                    <div key={index} className="bg-gray-300 rounded-lg shadow-lg p-4">
+                    <div key={index} className="rounded-md shadow-pink-500 shadow-md p-4">
                         <img
                             src={toy.picture}
                             alt={toy.toyName}
@@ -76,7 +76,7 @@ const ToyCategories = () => {
                             <span className="text-gray-500 mr-1">Rating: {toy.rating}</span>
                         </div>
                         <div className="flex justify-center mt-4">
-                            <button className="btn btn-secondary"
+                            <button className="bg-pink-500 hover:bg-pink-400 text-pink-900 hover:text-pink-800 font-bold px-4 py-2 rounded-md"
                                 onClick={() => fetchToyDetails(toy._id)}>
                                 Show Details
                             </button>
@@ -133,8 +133,7 @@ const ToyCategories = () => {
                                 </div>
                                 <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                                     <button
-                                        type="button"
-                                        className="btn btn-secondary"
+                                        className="bg-pink-500 hover:bg-pink-400 text-pink-900 hover:text-pink-800 font-bold px-4 py-2 rounded-md"
                                         onClick={resetSelectedToy}
                                     >
                                         Close

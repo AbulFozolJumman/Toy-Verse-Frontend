@@ -21,12 +21,12 @@ const ToyDIYProjects = () => {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <h2 className="text-3xl font-bold mb-8 text-center">Toy DIY Projects</h2>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <h2 className="text-3xl font-bold mb-8 p-2 border-s-4 border-pink-600">Toy DIY Projects</h2>
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-100 rounded-lg shadow-lg p-4"
+            className="bg-gray-100 rounded-md shadow-pink-500 shadow-md p-4"
           >
             <img
               src={project.image}

@@ -4,7 +4,7 @@
 const Tips = () => {
     return (
         <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-10 md:px-20 shadow">
-          <h2 className="text-3xl font-bold mb-6 text-white">Toy Safety Tips</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white  p-2 border-s-4 border-pink-600">Toy Safety Tips</h2>
           <ul className="space-y-4">
             <li className="flex items-start animate-bounce">
               <div className="flex-shrink-0 h-6 w-6 bg-white rounded-full flex justify-center items-center mr-3">

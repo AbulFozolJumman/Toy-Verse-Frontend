@@ -5,7 +5,7 @@ const Footer = () => {
             <footer className="footer p-10 bg-transparent">
                 <div>
                     <img className="w-28" src="https://i.ibb.co/WygR9cw/Toy-Verse-Logo.png" alt="" />
-                    <h2 className="text-4xl font-bold">Toy Verse</h2>
+                    <h2 className="text-4xl font-bold p-2 border-s-4 border-pink-600">Toy Verse</h2>
                 </div>
                 <div>
                     <div className="mb-5">

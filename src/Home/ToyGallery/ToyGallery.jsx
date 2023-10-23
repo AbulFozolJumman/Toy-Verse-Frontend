@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 const ToyGallery = () => {
     return (
         <div className="my-24">
-            <h2 className="text-4xl font-bold container mx-auto mb-12 p-2 border-s-4 border-pink-600">Toy Gallery</h2>
+            <h2 className="text-4xl font-bold container mx-auto mb-12 p-2 border-s-4 border-pink-600">Gallery</h2>
             <Marquee>
                 <img className="w-[300px] h-[400px] mx-5" src="https://m.media-amazon.com/images/I/81-qP36VwxL._SL1500_.jpg" />
                 <img className="w-[300px] h-[400px] mx-5" src="https://shop.hasbro.com/_next/image?url=https%3A%2F%2Fwww.hasbro.com%2Fcommon%2Fproductimages%2Fen_US%2FCABCF6C6A2714FC593973D9DF41C290D%2Fd2684c79e1ac7cb00f09fbade32a2a7df88bb421.jpg&w=3840&q=75" />

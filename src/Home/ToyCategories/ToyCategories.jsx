@@ -76,7 +76,7 @@ const ToyCategories = () => {
                             <span className="text-gray-500 mr-1">Rating: {toy.rating}</span>
                         </div>
                         <div className="flex justify-center mt-4">
-                            <button className="bg-pink-500 hover:bg-pink-400 text-pink-900 hover:text-pink-800 font-bold px-4 py-2 rounded-md"
+                            <button className="bg-pink-500 hover:bg-pink-400 text-white hover:text-pink-800 font-bold px-4 py-2 rounded-md"
                                 onClick={() => fetchToyDetails(toy._id)}>
                                 Show Details
                             </button>
@@ -133,7 +133,7 @@ const ToyCategories = () => {
                                 </div>
                                 <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                                     <button
-                                        className="bg-pink-500 hover:bg-pink-400 text-pink-900 hover:text-pink-800 font-bold px-4 py-2 rounded-md"
+                                        className="bg-pink-500 hover:bg-pink-400 text-white hover:text-pink-800 font-bold px-4 py-2 rounded-md"
                                         onClick={resetSelectedToy}
                                     >
                                         Close

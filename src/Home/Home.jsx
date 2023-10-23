@@ -1,6 +1,8 @@
 import useTitle from "../Hooks/useTitle";
 import Banner from "./Banner/Banner";
 import ToyDIYProjects from "./DIY/DIY";
+import FAQ from "./FAQ/FAQ";
+import Locations from "./Locations/Locations";
 import Reviews from "./Reviews/Reviews";
 import TOTM from "./TOTM/TOTM";
 import Tips from "./Tips/Tips";
@@ -21,6 +23,8 @@ const Home = () => {
             <Reviews></Reviews>
             <ToyDonation></ToyDonation>
             <ToyDIYProjects></ToyDIYProjects>
+            <FAQ />
+            <Locations />
         </div>
     );
 };

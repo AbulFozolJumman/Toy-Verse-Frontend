@@ -113,7 +113,7 @@ const AddToy = () => {
                         <textarea required name="description" placeholder="Description" className="w-full h-20 pl-3 pt-3 outline-pink-500 rounded-md" ></textarea>
                     </div>
                     <div className="form-control mt-5">
-                        <button className="bg-pink-500 hover:bg-pink-400 text-pink-900 hover:text-pink-800 font-bold px-4 py-2 rounded-md">Add Now</button>
+                        <button className="bg-pink-500 hover:bg-pink-400 text-white hover:text-pink-800 font-bold px-4 py-2 rounded-md">Add Now</button>
                     </div>
                 </form>
             </div>

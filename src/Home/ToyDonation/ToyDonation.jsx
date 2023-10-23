@@ -19,7 +19,7 @@ const ToyDonation = () => {
                         To donate, please visit our donation center or contact us for more
                         information.
                     </p>
-                    <button className="bg-pink-500 hover:bg-pink-400 text-pink-900 hover:text-pink-800 font-bold px-4 py-2 rounded-md">Get Started</button>
+                    <button className="bg-pink-500 hover:bg-pink-400 text-white hover:text-pink-800 font-bold px-4 py-2 rounded-md">Get Started</button>
                 </div>
             </div>
         </div>

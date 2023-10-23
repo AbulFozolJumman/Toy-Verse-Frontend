@@ -1,6 +1,6 @@
 # b7a11-toy-marketplace-client-side-AbulFozolJumman
 ## Client Side Site Link(Firebase) - https://toy-verse-1b21f.web.app/
-## Client Side Site Link(Netlify) - https://prismatic-nougat-f3e8b7.netlify.app/
+## Client Side Site Link(Netlify) - https://toy-verse.netlify.app/
 ## Five facts about Toy Verse
 - Toy Verse is a toys website of Movie Super Hero from Marvel, DC and Transformers franchises.
 - Here you can buy your favorite Superhero toys(used/intact) for kids who loves Superheroes.

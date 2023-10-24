@@ -4,6 +4,7 @@ import ToyDIYProjects from "./DIY/DIY";
 import FAQ from "./FAQ/FAQ";
 import Locations from "./Locations/Locations";
 import Reviews from "./Reviews/Reviews";
+import Subscribe from "./Subscribe/Subscribe";
 import TOTM from "./TOTM/TOTM";
 import Tips from "./Tips/Tips";
 import ToyCategories from "./ToyCategories/ToyCategories";
@@ -24,6 +25,7 @@ const Home = () => {
             <ToyDonation></ToyDonation>
             <ToyDIYProjects></ToyDIYProjects>
             <FAQ />
+            <Subscribe />
             <Locations />
         </div>
     );

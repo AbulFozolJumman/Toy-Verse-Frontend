@@ -61,7 +61,7 @@ const ToyCategories = () => {
                     </a>
                 </div>
             </div>
-            {/* <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700" /> */}
+            
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 flex justify-center">
                 {filteredToys.map((toy, index) => (
                     <div key={index} className="rounded-md shadow-pink-500 shadow-md p-4">
@@ -107,26 +107,27 @@ const ToyCategories = () => {
                                 &#8203;
                             </span>
                             <div
-                                className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+                                className="inline-block align-bottom bg-white rounded-md border border-pink-500 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
                                 role="dialog"
                                 aria-modal="true"
                                 aria-labelledby="modal-headline"
                             >
-                                <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                                <div className="bg-white border-b border-pink-500 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                                     <div className="sm:flex sm:items-start">
                                         <div className="mt-3 text-center sm:mt-0 sm:text-left">
-                                            <h3 className="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
+                                            <h3 className="text-lg leading-6 font-bold text-gray-900" id="modal-headline">
                                                 {selectedToy.toyName}
                                             </h3>
-                                            <div className="mt-2 max-h-80 overflow-y-auto">
-                                                <img src={selectedToy.picture} alt={selectedToy.toyName} className="w-full h-[400px] rounded-lg mb-4" />
-                                                <p className="text-sm text-gray-500">Toy Name: {selectedToy.toyName}</p>
-                                                <p className="text-sm text-gray-500">Seller Name: {selectedToy.displayName}</p>
-                                                <p className="text-sm text-gray-500">Seller Email: {selectedToy.email}</p>
-                                                <p className="text-sm text-gray-500">Price: ${selectedToy.price}</p>
-                                                <p className="text-sm text-gray-500">Rating: {selectedToy.rating}</p>
-                                                <p className="text-sm text-gray-500">Quantity: {selectedToy.quantity}</p>
-                                                <p className="text-sm text-gray-500">Description: {selectedToy.description}</p>
+                                            <div className="pt-5 max-h-80 overflow-y-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+                                                <img src={selectedToy.picture} alt={selectedToy.toyName} className="w-full rounded-lg mb-4" />
+                                                <div>
+                                                    <p className="text-sm text-gray-500"><span className="font-bold">Seller Name:</span> {selectedToy.displayName}</p>
+                                                    <p className="text-sm text-gray-500"><span className="font-bold">Seller Email:</span> {selectedToy.email}</p>
+                                                    <p className="text-sm text-gray-500"><span className="font-bold">Price:</span> ${selectedToy.price}</p>
+                                                    <p className="text-sm text-gray-500"><span className="font-bold">Rating:</span> {selectedToy.rating}</p>
+                                                    <p className="text-sm text-gray-500"><span className="font-bold">Quantity:</span> {selectedToy.quantity}</p>
+                                                    <p className="text-sm text-gray-500"><span className="font-bold">Description:</span> {selectedToy.description}</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

@@ -125,11 +125,11 @@ const MyToys = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container min-h-[80vh] mx-auto px-4 py-8">
       <h2 className="text-4xl font-bold mb-4 text-center">My Toys</h2>
       <div className="flex justify-center mb-4">
         <button
-          className="btn btn-secondary"
+          className="bg-pink-500 hover:bg-pink-400 text-white hover:text-pink-800 font-bold px-4 py-2 rounded-md"
           onClick={sortToys}
         >
           Sort: {sortOrder === 'asc' ? 'Ascending' : 'Descending'}

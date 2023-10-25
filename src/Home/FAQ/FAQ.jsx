@@ -13,7 +13,7 @@ const FAQ = () => {
                   <h3 className="mb-3 text-2xl font-bold">
                     We know how valuable your time is
                   </h3>
-                  <h5 className="mb-12 text-lg font-bold text-primary dark:text-primary-400 lg:mb-10 xl:mb-12">
+                  <h5 className="mb-12 text-lg font-bold text-pink-500 dark:text-primary-400 lg:mb-10 xl:mb-12">
                     Let us answer your questions
                   </h5>
 

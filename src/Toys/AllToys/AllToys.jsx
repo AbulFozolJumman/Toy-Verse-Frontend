@@ -45,46 +45,36 @@ const AllToys = () => {
           className="border border-gray-300 rounded px-2 py-1"
         />
       </div>
-      <div className="overflow-x-auto">
-        <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-green-300">
-            <tr>
-              <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">Seller Name</th>
-              <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">Toy Name</th>
-              <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">Category</th>
-              <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">Price</th>
-              <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">Quantity</th>
-              <th className="px-6 py-3 text-left text-sm font-medium text-gray-700">Actions</th>
-            </tr>
-          </thead>
-          <tbody className="bg-green-100 divide-y divide-gray-200">
-            {filteredToys.map((toy, index) => (
-              <tr key={index}>
-                <td className="px-6 py-4 whitespace-nowrap">{toy.displayName}</td>
-                <td className="px-6 py-4 whitespace-nowrap">{toy.toyName}</td>
-                <td className="px-6 py-4 whitespace-nowrap">{toy.category}</td>
-                <td className="px-6 py-4 whitespace-nowrap">${toy.price}</td>
-                <td className="px-6 py-4 whitespace-nowrap">{toy.quantity}</td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <button
-                    className="btn btn-secondary"
-                    onClick={() => showDetails(toy)}
-                  >
-                    Show Details
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 flex justify-center">
+                {filteredToys.map((toy, index) => (
+                    <div key={index} className="rounded-md shadow-pink-500 shadow-md p-4">
+                        <img
+                            src={toy.picture}
+                            alt={toy.toyName}
+                            className="w-full h-[400px] rounded-lg mb-4"
+                        />
+                        <h3 className="text-lg font-bold mb-2">{toy.toyName}</h3>
+                        <p className="text-gray-500 mb-2">Price: ${toy.price}</p>
+                        <div className="flex items-center">
+                            <span className="text-gray-500 mr-1">Rating: {toy.rating}</span>
+                        </div>
+                        <div className="flex justify-center mt-4">
+                            <button className="bg-pink-500 hover:bg-pink-400 text-white hover:text-pink-800 font-bold px-4 py-2 rounded-md"
+                                onClick={() => showDetails(toy)}>
+                                Show Details
+                            </button>
+                        </div>
+                    </div>
+                ))}
+            </div>
 
       {/* Modal */}
       {selectedToy && (
         <PrivateRoute>
         <Modal onClose={closeModal}>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col md:flex-row items-center">
             <img src={selectedToy.picture} alt={selectedToy.toyName} className="w-64 h-64 object-contain" />
+            <div>
             <h3 className="text-xl font-bold mt-4">Toy Name: {selectedToy.toyName}</h3>
             <p className="text-gray-600">Seller Name: {selectedToy.displayName}</p>
             <p className="text-gray-600">Seller Email: {selectedToy.email}</p>
@@ -92,6 +82,7 @@ const AllToys = () => {
             <p className="text-gray-600">Rating: {selectedToy.rating}</p>
             <p className="text-gray-600">Quantity: {selectedToy.quantity}</p>
             <p className="text-gray-600">Description: {selectedToy.description}</p>
+            </div>
           </div>
         </Modal>
         </PrivateRoute>

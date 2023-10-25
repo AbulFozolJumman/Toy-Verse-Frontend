@@ -7,8 +7,8 @@ const TOTM = () => {
 
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
-          <img src="https://i.ibb.co/thyvhzz/totm.webp" className="max-w-sm rounded-md shadow-pink-500 shadow-md" />
-          <div>
+          <img src="https://i.ibb.co/dBmhwCj/photo-1584444527303-9d66a8948673-auto-format-fit-crop-q-80-w-1470-ixlib-rb-4-0.jpg" className="max-w-sm rounded-md" />
+          <div className='md:pl-10'>
             <h1 className="text-5xl font-bold">Toy of the Month</h1>
             <p className="py-6">This month, we are featuring the incredible ToyX! With its interactive
               features and vibrant colors, it&#39;s the perfect toy for sparking
@@ -42,7 +42,7 @@ const TOTM = () => {
                 {/*body*/}
                 <div className="relative flex-auto">
                   <div className="p-5 overflow-y-auto grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <img src="https://i.ibb.co/thyvhzz/totm.webp" alt="TOTM" className="rounded-md" />
+                    <img src="https://i.ibb.co/dBmhwCj/photo-1584444527303-9d66a8948673-auto-format-fit-crop-q-80-w-1470-ixlib-rb-4-0.jpg" alt="TOTM" className="rounded-md w-[300px]" />
                     <div>
                       <p className="text-sm text-gray-500"><span className="font-bold">Toy Name:</span> Iron Man</p>
                       <p className="text-sm text-gray-500"><span className="font-bold">Seller Name:</span> Jumman</p>

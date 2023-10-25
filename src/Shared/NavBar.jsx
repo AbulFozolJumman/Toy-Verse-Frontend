@@ -35,7 +35,7 @@ const NavBar = () => {
                                     {/* <li><Link to='/error'>Error</Link></li> */}
                                 </>
                             }
-                            <li><Link to='/blogs'>Blogs</Link></li>
+                            
                         </ul>
                     </div>
                     <div className="flex items-center">
@@ -52,7 +52,7 @@ const NavBar = () => {
                                 <li><Link to='/addToy'>Add A Toy</Link></li>
                             </>
                         }
-                        <li><Link to='/blogs'>Blogs</Link></li>
+                        
                         {/* <li><Link to='/error'>Error</Link></li> */}
                     </ul>
                 </div>

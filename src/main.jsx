@@ -16,6 +16,7 @@ import Register from './Login&Register/Register';
 import AuthProvider from './Provider/AuthProvider';
 import ErrorPage from './Error/Error';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import DonateAToy from './Home/ToyDonation/DonateAToy';
 
 // Routers
 const router = createBrowserRouter([
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/donateAToy",
+        element: <DonateAToy />
       },
     ],
   },

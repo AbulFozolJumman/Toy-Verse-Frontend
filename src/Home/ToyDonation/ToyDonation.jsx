@@ -1,6 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 // This is Toy Donation Section
 
+import { Link } from "react-router-dom";
+
 const ToyDonation = () => {
     return (
         <div className="hero min-h-screen mb-12" style={{ backgroundImage: `url("https://i.ibb.co/YfwY2fr/donate-to-toys-for-tots-3255561-01-cf95b8c8f1b1419585a3c445096988ae.jpg")` }}>
@@ -19,7 +21,9 @@ const ToyDonation = () => {
                         To donate, please visit our donation center or contact us for more
                         information.
                     </p>
+                    <Link to="/donateAToy">
                     <button className="bg-pink-500 hover:bg-pink-400 text-white hover:text-pink-800 font-bold px-4 py-2 rounded-md">Get Started</button>
+                    </Link>
                 </div>
             </div>
         </div>
